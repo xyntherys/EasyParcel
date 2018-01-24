@@ -18,8 +18,9 @@
 
             <ImageView
                 android:id="@+id/img_logo"
+                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/logo_height"
+                android:layout_height="130dp"
                 android:layout_centerHorizontal="true"
                 android:src="@drawable/textlogo"/>
 
@@ -28,7 +29,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/img_logo"
-                android:layout_marginTop="@dimen/child_margin_top">
+                android:textColorHint="@color/colorWhite"
+                android:layout_marginTop="60dp">
 
                 <EditText
                     android:id="@+id/et_email"
@@ -36,6 +38,7 @@
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/ic_email"
                     android:hint="Email"
+                    android:fontFamily="@string/app_name"
                     android:textColorHint="@color/colorWhite"
                     android:textColor="@color/colorWhite"
                     android:inputType="textEmailAddress" />
@@ -48,6 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ti_email"
                 android:layout_marginTop="@dimen/child_margin_top"
+                android:textColorHint="@color/colorWhite"
                 app:passwordToggleEnabled="true"
                 app:passwordToggleTint="@android:color/white">
 
@@ -56,6 +60,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Password"
+                    android:fontFamily="@string/app_name"
+                    android:drawableRight="@drawable/ic_lock"
                     android:textColor="@color/colorWhite"
                     android:textColorHint="@color/colorWhite"
                     android:inputType="textPassword" />
@@ -64,33 +70,34 @@
 
             <Button
                 android:id="@+id/btn_login"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ti_password"
-                android:layout_marginTop="@dimen/button_margin"
+                android:layout_marginTop="30dp"
                 android:text="SIGN IN"
-                android:background="@color/colorPrimary"
-                android:textColor="@color/colorWhite"/>
-
-            <TextView
-                android:id="@+id/tv_register"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/btn_login"
-                android:layout_marginTop="@dimen/button_margin"
-                android:text="Don't have an account? Sign up now!"
-                android:textColor="@color/colorPrimary"
-                android:textAlignment="center" />
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/colorWhite" />
 
             <TextView
                 android:id="@+id/tv_forgot_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tv_register"
+                android:layout_below="@+id/btn_login"
                 android:layout_marginTop="@dimen/button_margin"
                 android:text="Forgot Password?"
                 android:textColor="@color/colorPrimary"
                 android:textAlignment="center" />
+            <TextView
+                android:id="@+id/tv_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_forgot_password"
+                android:layout_marginTop="@dimen/button_margin"
+                android:text="Don't have an account? Sign up now!"
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="center" />
+
 
             <ProgressBar
                 android:id="@+id/progress"

@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">EasyParcel</string>
+    <string name="dashboard_tips">Book a parcel to your desired destination or track your sent parcels.</string>
+    <string name="dashboard_welcome">Welcome to your Dashboard</string>
+    <string name="confirm">All done. Your Parcel is ready for booking.</string>
+    <string name="confirm_info">TBU</string>
+    <string name="mapapikey">AIzaSyBIA96krcktACQN1bd87ODAwgzsry_uSiA</string>
+
+    <!--AIzaSyBxJJjCN7WHdU8o6YCUnYMwgrfHAM9Rbrg-->
+
+
 </resources>

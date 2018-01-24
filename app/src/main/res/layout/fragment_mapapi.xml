@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/mapfragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.mapwithmarker.MapsMarkerActivity" />
+
+    <LinearLayout
+        android:id="@+id/holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:background="#96797878"
+        tools:mockup_opacity="1"
+        android:layout_gravity="top">
+
+            <TextView
+                android:id="@+id/close"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:drawableTop="@drawable/up"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextViewD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/seeLatLang"
+                android:paddingLeft="10dp"
+                android:fontFamily="@string/app_name"
+                android:paddingRight="15dp"
+                android:completionThreshold="1"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:ems="10"
+                android:hint="Destination">
+
+                <requestFocus />
+
+            </AutoCompleteTextView>
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextViewS"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp"
+                android:fontFamily="@string/app_name"
+                android:layout_below="@+id/seeLatLang"
+                android:completionThreshold="1"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:drawableRight="@drawable/ic_gps"
+                android:ems="10"
+                android:hint="Source">
+
+                <requestFocus />
+            </AutoCompleteTextView>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/getRoute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:textSize="12dp"
+                android:text="View Route"
+                android:shadowRadius="4"
+                android:fontFamily="@string/app_name"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/white"
+                android:layout_weight="4"/>
+
+            <Button
+                android:id="@+id/nextMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="12dp"
+                android:text="next"
+                android:shadowRadius="4"
+                android:layout_marginLeft="30dp"
+                android:fontFamily="@string/app_name"
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/white"
+                android:layout_weight="4"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/openHolder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:visibility="invisible"
+        android:background="#96797878">
+
+        <TextView
+            android:id="@+id/open"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:drawableTop="@drawable/down" />
+
+    </LinearLayout>
+
+</FrameLayout>

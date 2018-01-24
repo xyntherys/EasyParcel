@@ -84,6 +84,7 @@ public class LoginFragment extends Fragment {
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
     }
 
+
     private void login() {
 
         setError();
@@ -96,13 +97,13 @@ public class LoginFragment extends Fragment {
         if (!validateEmail(email)) {
 
             err++;
-            mTiEmail.setError("Email should be valid !");
+            mTiEmail.setError("Enter Email");
         }
 
         if (!validateFields(password)) {
 
             err++;
-            mTiPassword.setError("Password should not be empty !");
+            mTiPassword.setError("Password should not be empty");
         }
 
         if (err == 0) {
@@ -111,8 +112,9 @@ public class LoginFragment extends Fragment {
             mProgressBar.setVisibility(View.VISIBLE);
 
         } else {
-
-            showSnackBarMessage("Enter Valid Details !");
+            loginProcess(email,password);
+            mProgressBar.setVisibility(View.VISIBLE);
+            showSnackBarMessage("Enter Valid Details");
         }
     }
 
@@ -145,6 +147,7 @@ public class LoginFragment extends Fragment {
         Intent intent = new Intent(getActivity(), ProfileActivity.class);
         startActivity(intent);
 
+
     }
 
     private void handleError(Throwable error) {
@@ -166,7 +169,7 @@ public class LoginFragment extends Fragment {
             }
         } else {
 
-            showSnackBarMessage("Network Error !");
+            showSnackBarMessage("Network Error");
         }
     }
 

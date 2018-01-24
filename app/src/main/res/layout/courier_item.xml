@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Courier Service:"
+        android:textColor="@color/colorPrimary"
+        android:layout_margin="10dp"
+        android:textSize="20sp"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/couriers">
+
+
+        <RadioButton
+            android:id="@+id/c01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/colorWhite"
+            android:text="S.A Paribahan"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:enabled="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:textColor="@color/colorWhite"
+            android:text="Estimated cost: BDT 40
+Delivary time: 2-3 days"
+            android:layout_marginTop="2dp"/>
+
+        <View
+            android:background="@color/colorWhite"
+            android:layout_width = "350dp"
+            android:layout_height="1dip"
+            android:layout_marginLeft="13dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+
+
+
+
+        <RadioButton
+            android:id="@+id/c02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="Continental Express"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:enabled="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:textColor="@color/colorWhite"
+            android:text="Estimated cost: BDT 45
+Delivary time: 2-3 days"
+            android:layout_marginTop="2dp"/>
+
+        <View
+            android:background="@color/colorWhite"
+            android:layout_width = "350dp"
+            android:layout_height="1dip"
+            android:layout_marginLeft="13dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+
+
+
+        <RadioButton
+            android:id="@+id/c03"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="Jinish Pathao"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:enabled="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:textColor="@color/colorWhite"
+            android:text="Estimated cost: BDT 70
+Delivary time: 1-2 days"
+            android:layout_marginTop="2dp"/>
+
+        <View
+            android:background="@color/colorWhite"
+            android:layout_width = "350dp"
+            android:layout_height="1dip"
+            android:layout_marginLeft="13dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+
+
+
+
+        <RadioButton
+            android:id="@+id/c04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="TX Couriers"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:enabled="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:textColor="@color/colorWhite"
+            android:text="Estimated cost: BDT 35
+Delivary time: 3 days"
+            android:layout_marginTop="2dp"/>
+
+        <View
+            android:background="@color/colorWhite"
+            android:layout_width = "350dp"
+            android:layout_height="1dip"
+            android:layout_marginLeft="13dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/btn_next_courier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/rounded_button"
+        android:text="Next"
+        android:layout_gravity="center"
+        android:textColor="@color/colorWhite" />
+
+</LinearLayout>

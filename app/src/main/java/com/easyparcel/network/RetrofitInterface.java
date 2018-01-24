@@ -1,5 +1,6 @@
 package com.easyparcel.network;
 
+import com.easyparcel.model.Parcel;
 import com.easyparcel.model.Response;
 import com.easyparcel.model.User;
 
@@ -14,6 +15,9 @@ public interface RetrofitInterface {
 
     @POST("users")
     Observable<Response> register(@Body User user);
+
+    @POST("parcels")
+    Observable<Response> book(@Body Parcel parcel);
 
     @POST("authenticate")
     Observable<Response> login();

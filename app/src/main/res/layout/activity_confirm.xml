@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_above="@id/confirm"
+            android:src="@drawable/whitetick" />
+        <TextView
+            android:id="@+id/confirm"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="All done.
+Your parcel is ready for booking."
+            android:textColor="@color/colorWhite"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textAlignment="center"
+            android:textSize="25sp"/>
+
+    <TextView
+            android:id="@+id/confirm_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/confirm"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_marginTop="30dp"/>
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/confirm_info"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="56dp"
+            android:background="@drawable/rounded_button"
+            android:text="Confirm"
+            android:textColor="@color/colorWhite" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/btn_confirm"
+            android:layout_below="@+id/btn_confirm"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_button_white"
+            android:text="Cancel"
+            android:textColor="@color/colorPrimary" />
+
+</LinearLayout>

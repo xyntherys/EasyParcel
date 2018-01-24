@@ -19,7 +19,7 @@
             <ImageView
                 android:id="@+id/img_logo"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/logo_height"
+                android:layout_height="80dp"
                 android:layout_centerHorizontal="true"
                 android:src="@drawable/textlogo"/>
 
@@ -28,6 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/img_logo"
+                android:textColorHint="@color/colorWhite"
                 android:layout_marginTop="@dimen/child_margin_top">
 
                 <EditText
@@ -36,6 +37,7 @@
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/ic_person"
                     android:hint="Name"
+                    android:fontFamily="@string/app_name"
                     android:textColor="@color/colorWhite"
                     android:textColorHint="@color/colorWhite"
                     android:inputType="text" />
@@ -47,6 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ti_name"
+                android:textColorHint="@color/colorWhite"
                 android:layout_marginTop="@dimen/child_margin_top">
 
                 <EditText
@@ -55,6 +58,7 @@
                     android:layout_height="wrap_content"
                     android:drawableRight="@drawable/ic_email"
                     android:hint="Email"
+                    android:fontFamily="@string/app_name"
                     android:textColor="@color/colorWhite"
                     android:textColorHint="@color/colorWhite"
                     android:inputType="textEmailAddress" />
@@ -66,6 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/ti_email"
+                android:textColorHint="@color/colorWhite"
                 android:layout_marginTop="@dimen/child_margin_top"
                 app:passwordToggleEnabled="true"
                 app:passwordToggleTint="@android:color/white">
@@ -75,6 +80,29 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Password"
+                    android:fontFamily="@string/app_name"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:inputType="textPassword" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ti_re_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ti_password"
+                android:textColorHint="@color/colorWhite"
+                android:layout_marginTop="@dimen/child_margin_top"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@android:color/white">
+
+                <EditText
+                    android:id="@+id/et_re_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Confirm Password"
+                    android:fontFamily="@string/app_name"
                     android:textColor="@color/colorWhite"
                     android:textColorHint="@color/colorWhite"
                     android:inputType="textPassword" />
@@ -83,11 +111,12 @@
 
             <Button
                 android:id="@+id/btn_register"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/ti_password"
+                android:layout_below="@+id/ti_re_password"
                 android:layout_marginTop="@dimen/button_margin"
-                android:background="@color/colorPrimary"
+                android:background="@drawable/rounded_button"
                 android:textColor="@color/colorWhite"
                 android:text="Register" />
 

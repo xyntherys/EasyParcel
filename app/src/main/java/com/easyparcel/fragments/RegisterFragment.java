@@ -38,7 +38,8 @@ public class RegisterFragment extends Fragment {
     private EditText mEtName;
     private EditText mEtEmail;
     private EditText mEtPassword;
-    private Button   mBtRegister;
+    private EditText mEtRePassword;
+    private Button mBtRegister;
     private TextView mTvLogin;
     private TextInputLayout mTiName;
     private TextInputLayout mTiEmail;
@@ -62,6 +63,7 @@ public class RegisterFragment extends Fragment {
         mEtName = (EditText) v.findViewById(R.id.et_name);
         mEtEmail = (EditText) v.findViewById(R.id.et_email);
         mEtPassword = (EditText) v.findViewById(R.id.et_password);
+        mEtRePassword = (EditText) v.findViewById(R.id.et_re_password);
         mBtRegister = (Button) v.findViewById(R.id.btn_register);
         mTvLogin = (TextView) v.findViewById(R.id.tv_login);
         mTiName = (TextInputLayout) v.findViewById(R.id.ti_name);
@@ -80,25 +82,32 @@ public class RegisterFragment extends Fragment {
         String name = mEtName.getText().toString();
         String email = mEtEmail.getText().toString();
         String password = mEtPassword.getText().toString();
+        String repassword = mEtRePassword.getText().toString();
 
         int err = 0;
 
         if (!validateFields(name)) {
 
             err++;
-            mTiName.setError("Name should not be empty !");
+            mTiName.setError("Name can not be empty.");
         }
 
         if (!validateEmail(email)) {
 
             err++;
-            mTiEmail.setError("Email should be valid !");
+            mTiEmail.setError("Email should be valid!");
         }
 
         if (!validateFields(password)) {
 
             err++;
-            mTiPassword.setError("Password should not be empty !");
+            mTiPassword.setError("Password should not be empty");
+        }
+
+        if (!password.equals(repassword)) {
+
+            err++;
+            mTiPassword.setError("Passwords do not match.");
         }
 
         if (err == 0) {
@@ -113,7 +122,7 @@ public class RegisterFragment extends Fragment {
 
         } else {
 
-            showSnackBarMessage("Enter Valid Details !");
+            showSnackBarMessage("Enter Valid Details.");
         }
     }
 
@@ -157,7 +166,7 @@ public class RegisterFragment extends Fragment {
             }
         } else {
 
-            showSnackBarMessage("Network Error !");
+            showSnackBarMessage("Network Error.");
         }
     }
 

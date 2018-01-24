@@ -1,5 +1,6 @@
 package com.easyparcel;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.design.widget.Snackbar;
@@ -7,9 +8,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.easyparcel.gmap.MasterRouteActivity;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.easyparcel.fragments.ChangePasswordDialog;
@@ -31,9 +34,10 @@ public class ProfileActivity extends AppCompatActivity implements ChangePassword
 
     private TextView mTvName;
     private TextView mTvEmail;
-    private TextView mTvDate;
     private Button mBtChangePassword;
     private Button mBtLogout;
+    private Button mBtBook;
+    private Button mBtTrack;
 
     private ProgressBar mProgressbar;
 
@@ -46,6 +50,7 @@ public class ProfileActivity extends AppCompatActivity implements ChangePassword
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_profile);
         mSubscriptions = new CompositeSubscription();
         initViews();
@@ -57,13 +62,25 @@ public class ProfileActivity extends AppCompatActivity implements ChangePassword
 
         mTvName = (TextView) findViewById(R.id.tv_name);
         mTvEmail = (TextView) findViewById(R.id.tv_email);
-        mTvDate = (TextView) findViewById(R.id.tv_date);
         mBtChangePassword = (Button) findViewById(R.id.btn_change_password);
         mBtLogout = (Button) findViewById(R.id.btn_logout);
+        mBtBook = (Button) findViewById(R.id.btn_book_parcel);
+        mBtTrack = (Button) findViewById(R.id.btn_track_parcel);
         mProgressbar = (ProgressBar) findViewById(R.id.progress);
 
         mBtChangePassword.setOnClickListener(view -> showDialog());
         mBtLogout.setOnClickListener(view -> logout());
+        mBtBook.setOnClickListener(view -> bookParcels());
+        mBtTrack.setOnClickListener(view -> trackParcels());
+    }
+
+    private void bookParcels(){
+        Intent intent = new Intent(getApplicationContext(), MasterRouteActivity.class);
+        startActivity(intent);
+    }
+
+    private void trackParcels(){
+
     }
 
     private void initSharedPreferences() {
@@ -107,7 +124,6 @@ public class ProfileActivity extends AppCompatActivity implements ChangePassword
         mProgressbar.setVisibility(View.GONE);
         mTvName.setText(user.getName());
         mTvEmail.setText(user.getEmail());
-        mTvDate.setText(user.getCreated_at());
     }
 
     private void handleError(Throwable error) {
@@ -129,7 +145,7 @@ public class ProfileActivity extends AppCompatActivity implements ChangePassword
             }
         } else {
 
-            showSnackBarMessage("Network Error !");
+            showSnackBarMessage("Network Error.");
         }
     }
 
@@ -148,7 +164,7 @@ public class ProfileActivity extends AppCompatActivity implements ChangePassword
     @Override
     public void onPasswordChanged() {
 
-        showSnackBarMessage("Password Changed Successfully !");
+        showSnackBarMessage("Password Changed Successfully.");
     }
 }
 
